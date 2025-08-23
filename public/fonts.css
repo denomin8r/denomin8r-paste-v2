@@ -1,0 +1,143 @@
+/* Font Definitions for Denomin8r Website */
+
+/* Bookman Old Style Font Family */
+@font-face {
+    font-family: 'Bookman Old Style';
+    src: url('./fonts/bookman/bookmanoldstyle.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bookman Old Style';
+    src: url('./fonts/bookman/bookmanoldstyle_bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bookman Old Style';
+    src: url('./fonts/bookman/bookmanoldstyle_italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Bookman Old Style';
+    src: url('./fonts/bookman/bookmanoldstyle_bolditalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Avenir Next W1G Font Family */
+@font-face {
+    font-family: 'Avenir Next W1G';
+    src: url('./fonts/avenir/Avenir Next W1G UltraLight.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next W1G';
+    src: url('./fonts/avenir/Avenir Next W1G UltraLight Italic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir Next W1G';
+    src: url('./fonts/avenir/Avenir Next W1G Thin.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next W1G';
+    src: url('./fonts/avenir/Avenir Next W1G Thin Italic.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir Next W1G';
+    src: url('./fonts/avenir/Avenir Next W1G Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next W1G';
+    src: url('./fonts/avenir/Avenir Next W1G Light Italic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir Next W1G';
+    src: url('./fonts/avenir/Avenir Next W1G Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next W1G';
+    src: url('./fonts/avenir/Avenir Next W1G  Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir Next W1G';
+    src: url('./fonts/avenir/Avenir Next W1G Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next W1G';
+    src: url('./fonts/avenir/Avenir Next W1G Medium Italic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir Next W1G';
+    src: url('./fonts/avenir/Avenir Next W1G Demi.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next W1G';
+    src: url('./fonts/avenir/Avenir Next W1G Demi Italic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir Next W1G';
+    src: url('./fonts/avenir/Avenir Next W1G Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next W1G';
+    src: url('./fonts/avenir/Avenir Next W1G Bold Italic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Avenir Next W1G';
+    src: url('./fonts/avenir/Avenir Next W1G Heavy.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir Next W1G';
+    src: url('./fonts/avenir/Avenir Next W1G Heavy Italic.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+}
