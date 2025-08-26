@@ -178,10 +178,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Poster download and view functionality
     document.querySelectorAll('.download-btn').forEach(btn => {
         btn.addEventListener('click', function(e) {
-            e.preventDefault();
-            const posterItem = this.closest('.poster-item');
-            const posterTitle = posterItem.querySelector('h3').textContent;
-            alert(`Download functionality for "${posterTitle}" would be implemented here.`);
+            // Download functionality is handled by the href attribute
+            // No need to prevent default or add extra logic
         });
     });
 
@@ -189,8 +187,12 @@ document.addEventListener('DOMContentLoaded', function() {
         btn.addEventListener('click', function(e) {
             e.preventDefault();
             const posterItem = this.closest('.poster-item');
+            const posterImage = posterItem.querySelector('img');
             const posterTitle = posterItem.querySelector('h3').textContent;
-            alert(`Full-size view for "${posterTitle}" would be implemented here.`);
+            
+            if (posterImage) {
+                viewFullSize(posterImage.src, posterTitle);
+            }
         });
     });
 
@@ -277,3 +279,110 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+// Modal functionality for poster full-size viewing
+function viewFullSize(imageSrc, title) {
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImage');
+    const modalTitle = document.getElementById('modalTitle');
+    const magnifier = document.getElementById('magnifier');
+    
+    if (modal && modalImg && modalTitle && magnifier) {
+        modalTitle.textContent = title;
+        modalImg.src = imageSrc;
+        modal.style.display = 'block';
+        
+        // Reset magnifier
+        magnifier.style.display = 'none';
+        
+        // Wait for image to load before setting up magnifier
+        modalImg.onload = function() {
+            setupMagnifier(modalImg, magnifier);
+        };
+        
+        // If image is already loaded
+        if (modalImg.complete) {
+            setupMagnifier(modalImg, magnifier);
+        }
+    }
+}
+
+function setupMagnifier(image, magnifier) {
+    const zoomLevel = 3;
+    const magnifierSize = 200;
+    
+    // Mouse enter - show magnifier
+    image.addEventListener('mouseenter', function() {
+        magnifier.style.display = 'block';
+    });
+    
+    // Mouse leave - hide magnifier
+    image.addEventListener('mouseleave', function() {
+        magnifier.style.display = 'none';
+    });
+    
+    // Mouse move - update magnifier position and content
+    image.addEventListener('mousemove', function(e) {
+        const rect = image.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        // Calculate magnifier position relative to the modal content
+        const modalContent = image.closest('.modal-content');
+        const modalRect = modalContent.getBoundingClientRect();
+        const magnifierX = e.clientX - modalRect.left - magnifierSize / 2;
+        const magnifierY = e.clientY - modalRect.top - magnifierSize / 2;
+        
+        // Position the magnifier
+        magnifier.style.left = magnifierX + 'px';
+        magnifier.style.top = magnifierY + 'px';
+        
+        // Calculate the scaled dimensions maintaining aspect ratio
+        const imageAspectRatio = image.naturalWidth / image.naturalHeight;
+        const displayAspectRatio = image.offsetWidth / image.offsetHeight;
+        
+        let scaledWidth, scaledHeight;
+        if (imageAspectRatio > displayAspectRatio) {
+            // Image is wider than display
+            scaledWidth = image.offsetWidth * zoomLevel;
+            scaledHeight = scaledWidth / imageAspectRatio;
+        } else {
+            // Image is taller than display
+            scaledHeight = image.offsetHeight * zoomLevel;
+            scaledWidth = scaledHeight * imageAspectRatio;
+        }
+        
+        // Calculate background position for zoomed view
+        // The background should be positioned so that the cursor point is centered in the magnifier
+        const bgX = (x / image.offsetWidth) * 100;
+        const bgY = (y / image.offsetHeight) * 100;
+        
+        // Set the magnified background with proper aspect ratio
+        magnifier.style.backgroundImage = `url(${image.src})`;
+        magnifier.style.backgroundPosition = `${bgX}% ${bgY}%`;
+        magnifier.style.backgroundSize = `${scaledWidth}px ${scaledHeight}px`;
+        magnifier.style.backgroundRepeat = 'no-repeat';
+    });
+}
+
+// Initialize modal close functionality when DOM is ready
+document.addEventListener('DOMContentLoaded', function() {
+    // Close modal when clicking the X
+    const closeBtn = document.querySelector('.close');
+    if (closeBtn) {
+        closeBtn.addEventListener('click', function() {
+            const modal = document.getElementById('imageModal');
+            if (modal) {
+                modal.style.display = 'none';
+            }
+        });
+    }
+
+    // Close modal when clicking outside of it
+    window.addEventListener('click', function(event) {
+        const modal = document.getElementById('imageModal');
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+});

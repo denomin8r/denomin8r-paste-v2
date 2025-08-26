@@ -12,40 +12,42 @@
     <main>
         <section class="content">
             <div class="container">
-                <h1>Posters</h1>
-                <p>Browse our collection of downloadable posters</p>
+                <h1>Denomin8r Posters</h1>
+                <p>Want to do some wheatpasting of your own?</p>
+                <p>Feel free to use these posters for your own purposes. Download, print, and paste them up. Or use them as a reference for your own works!</p>
+                <p>To mass-print these, check out the print shops I personally recommend on the <a href="/wheatpasting.html">Wheatpasting</a> page.</p>
                 
                 <div class="posters-grid">
                     <!-- Poster 1 -->
-                    <div class="poster-item">
+                    <div class="poster-item" data-category="small medium">
                         <div class="poster-image">
                             <img src="assets/posters/poster_reclaim_18x24.png" alt="Reclaim Poster">
                         </div>
                         <div class="poster-info">
-                            <h3>Reclaim</h3>
+                            <h3>"Reclaim"</h3>
                             <div class="resolutions">
                                 <span class="resolution">18" × 24", 300dpi</span>
                             </div>
                             <div class="poster-actions">
-                                <button class="download-btn">Download</button>
-                                <button class="view-btn">View Full Size</button>
+                                <a href="assets/posters/poster_reclaim_18x24.png" download class="download-btn">Download</a>
+                                <button class="view-btn" onclick="viewFullSize('assets/posters/poster_reclaim_18x24.png', 'Reclaim Poster')">View Full Size</button>
                             </div>
                         </div>
                     </div>
 
                     <!-- Poster 2 -->
-                    <div class="poster-item">
+                    <div class="poster-item" data-category="medium large">
                         <div class="poster-image">
                             <img src="assets/posters/poster_sanity_18x24.png" alt="Sanity Poster">
                         </div>
                         <div class="poster-info">
-                            <h3>Sanity</h3>
+                            <h3>"Sanity"</h3>
                             <div class="resolutions">
                                 <span class="resolution">18" × 24", 300dpi</span>
                             </div>
                             <div class="poster-actions">
-                                <button class="download-btn">Download</button>
-                                <button class="view-btn">View Full Size</button>
+                                <a href="assets/posters/poster_sanity_18x24.png" download class="download-btn">Download</a>
+                                <button class="view-btn" onclick="viewFullSize('assets/posters/poster_sanity_18x24.png', 'Sanity Poster')">View Full Size</button>
                             </div>
                         </div>
                     </div>
@@ -53,6 +55,18 @@
             </div>
         </section>
     </main>
+
+    <!-- Full Size Image Modal -->
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <div class="modal-image-container">
+                <img id="modalImage" src="" alt="">
+                <div class="magnifier" id="magnifier"></div>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
