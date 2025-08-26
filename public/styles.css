@@ -152,6 +152,15 @@ main {
     color: var(--denomin8r-blue)
 }
 
+.nav-logo h1{
+    color: var(--denomin8r-blue) !important;
+    font-weight: bold;
+    font-family: var(--font-bookman);
+    border-left: 1px solid #ddd;
+    padding-left: 1.5rem;
+    margin-left: 0.5rem;
+}
+
 .instagram-nav-link {
     color: var(--denomin8r-blue) !important;
     font-weight: bold;
@@ -162,7 +171,7 @@ main {
 }
 
 .instagram-nav-link:hover {
-    color: #003366 !important;
+    color: #bb4700 !important;
 }
 
 .hamburger {

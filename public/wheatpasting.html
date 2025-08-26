@@ -5,26 +5,130 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Denomin8r - Wheatpasting</title>
     <link rel="stylesheet" href="fonts.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="wheatpasting.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h1>Denomin8r</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link" id="nav-home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link" id="nav-about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="wheatpasting.html" class="nav-link" id="nav-wheatpasting">Wheatpasting</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="posters.html" class="nav-link" id="nav-posters">Posters</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link" id="nav-contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://www.instagram.com/denomin8r" target="_blank" class="nav-link instagram-nav-link">
+                            <i class="fab fa-instagram"></i>
+                            <span>denomin8r</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
     <main>
         <section class="content">
             <div class="container">
                 <h1>Wheatpasting</h1>
-                <p>Content coming soon...</p>
                 
-                <div class="placeholder-content">
-                    <div class="placeholder-image large">
-                        <i class="fas fa-image"></i>
-                        <p>Wheatpasting Content</p>
+                <p>Wheatpasting is the art of applying posters to public surfaces using a paste made from wheat flour and water. It's a traditional method of street art that has been used for decades to share messages, art, and information in public spaces.</p>
+
+                <h2>What You'll Need</h2>
+                <ul>
+                    <li><strong>Wheat paste:</strong> Mix 1 part wheat flour with 2 parts water, cook until thickened</li>
+                    <li><strong>Brushes:</strong> Large paint brushes or wallpaper brushes work best</li>
+                    <li><strong>Posters:</strong> Your artwork printed on paper (newsprint or similar)</li>
+                    <li><strong>Bucket:</strong> To carry your paste</li>
+                    <li><strong>Scraper:</strong> To remove old posters if needed</li>
+                </ul>
+
+                <h2>Basic Technique</h2>
+                <ol>
+                    <li>Prepare your wheat paste and let it cool</li>
+                    <li>Clean the surface you want to paste on</li>
+                    <li>Apply paste to the surface first</li>
+                    <li>Place your poster and smooth it out</li>
+                    <li>Apply more paste over the top</li>
+                    <li>Use a brush to remove air bubbles</li>
+                </ol>
+
+                <h2>Recommended Print Shops</h2>
+                <div class="print-shops">
+                    <div class="print-shop-item">
+                        <div class="print-shop-name">FedEx Office</div>
+                        <div class="print-shop-description">Good for large format prints, multiple locations</div>
+                        <a href="https://www.fedex.com/en-us/office.html" target="_blank">Visit Website</a>
                     </div>
+                    
+                    <div class="print-shop-item">
+                        <div class="print-shop-name">Staples</div>
+                        <div class="print-shop-description">Affordable large format printing</div>
+                        <a href="https://www.staples.com/services/printing/" target="_blank">Visit Website</a>
+                    </div>
+                    
+                    <div class="print-shop-item">
+                        <div class="print-shop-name">Local Print Shops</div>
+                        <div class="print-shop-description">Often better quality and more flexible with paper types</div>
+                        <p>Search for "print shop" or "copy center" in your area</p>
+                    </div>
+                </div>
+
+                <h2>Tips & Safety</h2>
+                <ul>
+                    <li>Always check local laws and regulations</li>
+                    <li>Respect private property</li>
+                    <li>Use biodegradable paste when possible</li>
+                    <li>Work quickly - wheat paste dries fast</li>
+                    <li>Consider the weather - avoid rain</li>
+                </ul>
+
+                <h2>Wheat Paste Recipe</h2>
+                <div class="code-block">
+                    Ingredients:
+                    - 1 cup wheat flour
+                    - 2 cups water
+                    - 1/4 cup sugar (optional, helps with adhesion)
+                    
+                    Instructions:
+                    1. Mix flour and water in a pot
+                    2. Heat on medium, stirring constantly
+                    3. Cook until mixture thickens (about 5-10 minutes)
+                    4. Let cool before using
+                    5. Store in refrigerator for up to 1 week
                 </div>
             </div>
         </section>
     </main>
 
-    <script src="script.js"></script>
+    <script>
+        // Highlight current page in navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = 'nav-wheatpasting';
+            const navLink = document.getElementById(currentPage);
+            if (navLink) {
+                navLink.classList.add('active');
+            }
+        });
+    </script>
 </body>
 </html>
