@@ -479,6 +479,40 @@ a:hover {
     overflow-x: auto;
 }
 
+/* Section containers and back-to-top arrows */
+.section-container {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.section-content {
+    padding-right: 60px; /* Leave space for the arrow */
+}
+
+.back-to-top {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 50px;
+    text-align: center;
+}
+
+.back-to-top a {
+    display: inline-block;
+    padding: 8px;
+    color: #666;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.back-to-top a:hover {
+    color: #e4405f;
+}
+
+.back-to-top i {
+    font-size: 1.2rem;
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
     .container {
