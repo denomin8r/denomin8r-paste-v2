@@ -19,8 +19,8 @@
 
 body {
     font-family: var(--font-monospace);
-    background: "white";
-    color: "black";
+    background: white;
+    color: black;
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -48,19 +48,19 @@ main {
 
 /* Typography */
 h1 {
-    color: "black";
+    color: black;
     font-family: var(--font-monospace);
     font-size: 2.5rem;
     font-weight: normal;
     margin-bottom: 3rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    border-bottom: 2px solid "black";
+    border-bottom: 1px solid black;
     padding-bottom: 1rem;
 }
 
 h2 {
-    color: "black";
+    color: black;
     font-family: var(--font-monospace);
     font-size: 1.5rem;
     font-weight: normal;
@@ -70,7 +70,7 @@ h2 {
 }
 
 h3 {
-    color: "black";
+    color: black;
     font-family: var(--font-monospace);
     font-size: 1.2rem;
     font-weight: normal;
@@ -80,7 +80,7 @@ h3 {
 }
 
 p {
-    color: "black";
+    color: black;
     font-size: 1rem;
     line-height: 1.8;
     margin-bottom: 1.5rem;
@@ -98,7 +98,7 @@ li {
 }
 
 a {
-    color: "black";
+    color: black;
     text-decoration: underline;
     transition: color 0.2s ease;
 }
@@ -109,8 +109,8 @@ a:hover {
 
 /* Navigation Styles - Minimalistic Monospace */
 .navbar {
-    background: "white";
-    border-bottom: 2px solid "black";
+    background: white;
+    border-bottom: 1px solid black;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -138,6 +138,16 @@ a:hover {
     padding: 0;
 }
 
+.nav-logo h1 a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.nav-logo h1 a:hover {
+    color: #bb4700;
+}
+
 .nav-menu {
     display: flex;
     list-style: none;
@@ -152,7 +162,7 @@ a:hover {
 
 .nav-link {
     text-decoration: none;
-    color: "black";
+    color: black;
     font-family: var(--font-monospace);
     font-size: 1.1rem;
     font-weight: normal;
@@ -174,7 +184,7 @@ a:hover {
     left: 0;
     width: 100%;
     height: 2px;
-    background: "black";
+    background: black;
 }
 
 .instagram-nav-link {
@@ -201,21 +211,21 @@ a:hover {
 .bar {
     width: 25px;
     height: 3px;
-    background: "black";
+    background: black;
     margin: 3px 0;
     transition: 0.3s;
 }
 
 /* Text Container Styles */
 .text-container {
-    background: "white";
+    background: white;
     padding: 1rem;
     border: 1px solid var(--border-light);
     margin-bottom: 2rem;
 }
 
 .text-container p {
-    color: "black";
+    color: black;
     margin-bottom: 0.5rem;
     text-shadow: none;
 }
@@ -224,45 +234,7 @@ a:hover {
     margin-bottom: 0;
 }
 
-/* Featured Grid */
-.featured-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
-}
 
-.featured-item {
-    background: "white";
-    overflow: hidden;
-    border: 1px solid var(--border-light);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.featured-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-}
-
-.featured-item img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.featured-content {
-    padding: 1.5rem;
-}
-
-.featured-content h3 {
-    margin-bottom: 1rem;
-    text-transform: none;
-    letter-spacing: 0;
-}
-
-.featured-content p {
-    margin-bottom: 1rem;
-}
 
 /* Posters Grid */
 .posters-grid {
@@ -273,8 +245,8 @@ a:hover {
 }
 
 .poster-item {
-    background: "white";
-    border: 1px solid var(--border-light);
+    background: white;
+    border: 2px solid var(--border-light);
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -315,7 +287,7 @@ a:hover {
 }
 
 .resolution {
-    background: "white";
+    background: white;
     color: var(--accent-gray);
     padding: 0.25rem 0.5rem;
     border: 1px solid var(--border-light);
@@ -365,28 +337,28 @@ a:hover {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    max-width: 500px;
-    margin: 0 auto;
+    margin: 0;
     width: 100%;
 }
 
 .contact-link {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    padding: 1.5rem 2rem;
-    background: "white";
+    justify-content: flex-start;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    background: #fafafa;
     text-decoration: none;
     color: #e4405f;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-family: var(--font-monospace);
     font-weight: normal;
     transition: all 0.3s ease;
     border: 1px solid var(--border-light);
     width: 100%;
     max-width: 400px;
-    margin: 0 auto;
+    margin: 0;
+    box-shadow: -1px 1px 4px rgba(0,0,0,0.08);
 }
 
 .contact-link:hover {
@@ -418,7 +390,7 @@ a:hover {
 
 .modal-content {
     position: relative;
-    background-color: "white";
+    background-color: white;
     margin: 5% auto;
     padding: 2rem;
     border: none;
@@ -429,7 +401,7 @@ a:hover {
 }
 
 .close {
-    color: "black";
+    color: black;
     float: right;
     font-size: 2rem;
     font-weight: bold;
@@ -456,29 +428,12 @@ a:hover {
 }
 
 /* Wheatpasting specific styles */
-.wheatpasting-image {
-    margin: 2rem 0;
-    text-align: center;
-}
-
-.wheatpasting-image img {
-    max-width: 100%;
-    height: auto;
-    border: 1px solid var(--border-light);
-}
-
-.wheatpasting-image figcaption {
-    margin-top: 1rem;
-    font-size: 0.9rem;
-    color: var(--accent-gray);
-    font-style: italic;
-}
 
 .print-shops {
     background: #f8f8f8;
     padding: 2rem;
     margin: 2rem 0;
-    border-left: 4px solid "black";
+    border-left: 4px solid black;
 }
 
 .print-shop-item {
@@ -542,7 +497,6 @@ a:hover {
         display: flex;
     }
     
-    .featured-grid,
     .posters-grid {
         grid-template-columns: 1fr;
     }
