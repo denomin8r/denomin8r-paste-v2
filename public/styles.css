@@ -363,10 +363,11 @@ a:hover {
     font-weight: normal;
     transition: all 0.3s ease;
     border: 1px solid var(--border-light);
-    width: 100%;
-    max-width: 400px;
+    width: fit-content;
     margin: 0;
     box-shadow: -1px 1px 4px rgba(0,0,0,0.08);
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .contact-link:hover {
@@ -382,6 +383,8 @@ a:hover {
 
 .contact-link span {
     font-size: 1.2rem;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 /* Modal Styles */
