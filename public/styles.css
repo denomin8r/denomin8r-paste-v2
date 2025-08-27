@@ -100,11 +100,19 @@ li {
 a {
     color: black;
     text-decoration: underline;
+    font-weight: bold;
     transition: color 0.2s ease;
 }
 
 a:hover {
     color: var(--accent-gray);
+}
+
+/* Denomin8r Text Styling */
+.denomin8r-text {
+    color: var(--denomin8r-blue);
+    font-family: var(--font-bookman);
+    font-weight: bold;
 }
 
 /* Navigation Styles - Minimalistic Monospace */
