@@ -24,7 +24,8 @@ function setActiveNavigation() {
     
     navLinks.forEach(link => {
         link.classList.remove('active');
-        if (link.getAttribute('href') === currentPage) {
+        const href = link.getAttribute('href');
+        if (href === currentPage || (currentPage === 'index.html' && href === 'index.html')) {
             link.classList.add('active');
         }
     });
@@ -54,25 +55,6 @@ function initMobileNavigation() {
 // Load header when DOM is ready
 document.addEventListener('DOMContentLoaded', function() {
     loadHeader();
-    
-    // Mobile Navigation Toggle (legacy - will be replaced by initMobileNavigation)
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-menu');
-
-    if (hamburger && navMenu) {
-        hamburger.addEventListener('click', function() {
-            hamburger.classList.toggle('active');
-            navMenu.classList.toggle('active');
-        });
-
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                navMenu.classList.remove('active');
-            });
-        });
-    }
 
     // Poster Filtering Functionality
     const filterButtons = document.querySelectorAll('.filter-btn');

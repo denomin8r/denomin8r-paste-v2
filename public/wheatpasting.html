@@ -4,48 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Denomin8r - Wheatpasting</title>
-    <link rel="stylesheet" href="fonts.css">
-    <link rel="stylesheet" href="wheatpasting.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="nav-container">
-                <div class="nav-logo">
-                    <h1>Denomin8r</h1>
-                </div>
-                <ul class="nav-menu">
-                    <li class="nav-item">
-                        <a href="index.html" class="nav-link" id="nav-home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="about.html" class="nav-link" id="nav-about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="wheatpasting.html" class="nav-link" id="nav-wheatpasting">Wheatpasting</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="posters.html" class="nav-link" id="nav-posters">Posters</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="contact.html" class="nav-link" id="nav-contact">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="https://www.instagram.com/denomin8r" target="_blank" class="nav-link instagram-nav-link">
-                            <i class="fab fa-instagram"></i>
-                            <span>denomin8r</span>
-                        </a>
-                    </li>
-                </ul>
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </div>
-        </nav>
-    </header>
+
     <main>
         <section class="content">
             <div class="container">
@@ -120,15 +83,6 @@
         </section>
     </main>
 
-    <script>
-        // Highlight current page in navigation
-        document.addEventListener('DOMContentLoaded', function() {
-            const currentPage = 'nav-wheatpasting';
-            const navLink = document.getElementById(currentPage);
-            if (navLink) {
-                navLink.classList.add('active');
-            }
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
