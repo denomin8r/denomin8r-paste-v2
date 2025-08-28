@@ -5,6 +5,7 @@
     --font-avenir: 'Avenir Next W1G', sans-serif;
     --accent-gray: #666666;
     --border-light: #e0e0e0;
+    --border-dark: #888;
     --denomin8r-blue: #0047bb;
     --text-dark: #333;
     --text-medium: #666;
@@ -56,7 +57,6 @@ h1 {
     text-transform: uppercase;
     letter-spacing: 2px;
     border-bottom: 1px solid black;
-    padding-bottom: 1rem;
 }
 
 h2 {
@@ -267,6 +267,7 @@ a:hover {
 .poster-image {
     width: 100%;
     overflow: hidden;
+    border: 1px solid var(--border-dark);
 }
 
 .poster-image img {
@@ -274,10 +275,6 @@ a:hover {
     height: auto;
     display: block;
     transition: transform 0.3s ease;
-}
-
-.poster-item:hover .poster-image img {
-    transform: scale(1.05);
 }
 
 .poster-info {
@@ -510,6 +507,7 @@ a:hover {
 
 .back-to-top a:hover {
     color: #e4405f;
+    transform: translateY(-5px);
 }
 
 .back-to-top i {
