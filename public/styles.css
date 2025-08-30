@@ -108,6 +108,15 @@ a:hover {
     color: var(--accent-gray);
 }
 
+/* Horizontal Rule Styling */
+hr {
+    width: 100%;
+    height: 1px;
+    background-color: var(--denomin8r-blue);
+    border: none;
+    margin: 1rem auto;
+}
+
 /* Denomin8r Text Styling */
 .denomin8r-text {
     color: var(--denomin8r-blue);
