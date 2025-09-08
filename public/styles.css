@@ -7,6 +7,7 @@
     --border-light: #e0e0e0;
     --border-dark: #888;
     --denomin8r-blue: #0047bb;
+    --denomin8r-orange: #bb4700;
     --text-dark: #333;
     --text-medium: #666;
     --text-light: #aaa;
@@ -57,6 +58,7 @@ h1 {
     text-transform: uppercase;
     letter-spacing: 2px;
     border-bottom: 1px solid black;
+    display: inline-block;
 }
 
 h2 {
@@ -105,7 +107,7 @@ a {
 }
 
 a:hover {
-    color: var(--accent-gray);
+    color: var(--denomin8r-orange);
 }
 
 /* Horizontal Rule Styling */
@@ -121,7 +123,13 @@ hr {
 .denomin8r-text {
     color: var(--denomin8r-blue);
     font-family: var(--font-bookman);
+    font-size: 2.3rem;
     font-weight: bold;
+}
+
+/* Contents class link styling */
+.contents a {
+    text-decoration: none;
 }
 
 /* Navigation Styles - Minimalistic Monospace */
@@ -162,7 +170,7 @@ hr {
 }
 
 .nav-logo h1 a:hover {
-    color: #bb4700;
+    color: var(--denomin8r-orange);
 }
 
 .nav-menu {
@@ -216,7 +224,7 @@ hr {
 }
 
 .instagram-nav-link:hover {
-    color: #bb4700 !important;
+    color: var(--denomin8r-orange) !important;
 }
 
 .hamburger {

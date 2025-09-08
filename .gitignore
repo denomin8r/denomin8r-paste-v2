@@ -70,3 +70,5 @@ node_modules/
 .DS_Store
 .DS_Store
 /public/assets/posters
+.DS_Store
+.DS_Store
