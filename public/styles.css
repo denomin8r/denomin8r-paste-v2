@@ -99,6 +99,11 @@ li {
     line-height: 1.6;
 }
 
+.contents li a {
+    font-weight: normal;
+    text-decoration: underline;
+}
+
 a {
     color: black;
     text-decoration: underline;
@@ -398,10 +403,10 @@ hr {
 }
 
 .contact-link:hover {
-    background: #e4405f;
-    color: white;
+    background: #eeeeee;
+    color: #d43c58;
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
 }
 
 .contact-link i {
