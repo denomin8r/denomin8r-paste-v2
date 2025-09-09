@@ -26,6 +26,8 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    position: relative;
+    min-height: 100vh;
 }
 
 /* Remove the blue overlay and eyechart background */
@@ -666,7 +668,7 @@ a.contact-link {
 
 /* Footer Styles */
 footer {
-    position: fixed;
+    position: absolute;
     bottom: 0;
     right: 0;
     padding: 20px;
