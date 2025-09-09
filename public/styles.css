@@ -147,6 +147,10 @@ hr {
     font-weight: bold;
 }
 
+.nav-denomin8r-text::hover{
+    color: var(--denomin8r-orange);
+}
+
 /* Contents class link styling */
 .contents li a {
     font-weight: normal;
@@ -248,10 +252,21 @@ hr {
     padding-left: 1.5rem;
     margin-left: 0.5rem;
     font-size: 1.25rem;
+    transition: color 0.2s ease;
+}
+
+.instagram-nav-link i {
+    transition: color 0.2s ease;
 }
 
 .instagram-nav-link:hover {
     color: var(--denomin8r-orange) !important;
+    transition: color 0.2s ease;
+}
+
+.instagram-nav-link:hover .nav-denomin8r-text {
+    color: var(--denomin8r-orange) !important;
+    transition: color 0.2s ease;
 }
 
 .hamburger {
@@ -530,6 +545,24 @@ a.contact-link {
     font-size: 0.9rem;
     line-height: 1.6;
     overflow-x: auto;
+}
+
+/* About Page Images */
+.images {
+    margin-top: 2rem;
+}
+
+.placeholder-image.large {
+    width: 100%;
+    max-width: 100%;
+}
+
+.placeholder-image.large img {
+    width: 100%;
+    height: auto;
+    max-height: 70vh;
+    object-fit: contain;
+    border: 2px solid black;
 }
 
 /* Section containers and back-to-top arrows */
