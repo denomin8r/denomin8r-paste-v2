@@ -83,7 +83,7 @@ h3 {
 
 p {
     color: black;
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 1.8;
     margin-bottom: 1.5rem;
     text-shadow: none;
@@ -99,7 +99,7 @@ li {
     line-height: 1.6;
 }
 
-.contents li a {
+.content a {
     font-weight: normal;
     text-decoration: underline;
 }
@@ -140,8 +140,9 @@ hr {
 }
 
 /* Contents class link styling */
-.contents a {
-    text-decoration: none;
+.contents li a {
+    font-weight: normal;
+    text-decoration: underline;
 }
 
 /* Navigation Styles - Minimalistic Monospace */
@@ -470,12 +471,17 @@ hr {
     border: 1px solid var(--border-light);
 }
 
-/* Wheatpasting specific styles */
-
 .print-shops {
     background: #f8f8f8;
-    padding: 2rem;
-    margin: 2rem 0;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-left: 4px solid black;
+}
+
+.wheatpaste-shops {
+    background: #f8f8f8;
+    padding: 1rem;
+    margin: 1rem 0;
     border-left: 4px solid black;
 }
 
