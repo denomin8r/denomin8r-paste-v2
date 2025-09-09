@@ -230,9 +230,10 @@ hr {
 .nav-link.active::after {
     content: '';
     position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 100%;
+    bottom: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
     height: 2px;
     background: black;
 }
@@ -590,17 +591,17 @@ a.contact-link {
 }
 
 .nav-menu.active .nav-link {
-    padding: 0.75rem 1.5rem !important;
-    border-bottom: 1px solid #f0f0f0 !important;
+    padding: 0.5rem 0.5rem !important;
+    border-bottom: none !important;
     width: 100% !important;
     display: block !important;
-    line-height: 1.2 !important;
+    line-height: 1.0rem !important;
     margin: 0 !important;
     text-decoration: none !important;
     text-transform: uppercase !important;
     letter-spacing: 1px !important;
     font-family: var(--font-monospace) !important;
-    font-size: 1.1rem !important;
+    font-size: 1.0rem !important;
     font-weight: normal !important;
     color: black !important;
     transition: color 0.2s ease !important;
@@ -608,6 +609,16 @@ a.contact-link {
 
 .nav-menu.active .nav-item:last-child .nav-link {
     border-bottom: none;
+}
+
+.nav-menu.active .instagram-nav-link {
+    text-transform: none !important;
+    font-family: var(--font-bookman) !important;
+    font-weight: bold !important;
+    color: var(--denomin8r-blue) !important;
+    border-left: none !important;
+    padding-left: 1.5rem !important;
+    margin-left: 0 !important;
 }
 
 .hamburger.active .bar:nth-child(2) {
