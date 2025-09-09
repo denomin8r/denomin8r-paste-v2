@@ -17,6 +17,19 @@ function loadHeader() {
         });
 }
 
+// Footer Loading Function
+function loadFooter() {
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(html => {
+            // Insert footer at the end of the body
+            document.body.insertAdjacentHTML('beforeend', html);
+        })
+        .catch(error => {
+            console.error('Error loading footer:', error);
+        });
+}
+
 // Set active navigation state
 function setActiveNavigation() {
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
@@ -52,9 +65,10 @@ function initMobileNavigation() {
     }
 }
 
-// Load header when DOM is ready
+// Load header and footer when DOM is ready
 document.addEventListener('DOMContentLoaded', function() {
     loadHeader();
+    loadFooter();
 
     // Poster Filtering Functionality
     const filterButtons = document.querySelectorAll('.filter-btn');

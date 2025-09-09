@@ -10,7 +10,7 @@
     --denomin8r-orange: #bb4700;
     --text-dark: #333;
     --text-medium: #666;
-    --text-light: #aaa;
+    --text-light: #bbb;
 }
 
 * {
@@ -122,6 +122,12 @@ hr {
     background-color: var(--denomin8r-blue);
     border: none;
     margin: 1rem auto;
+}
+
+.denomin8r {
+    font-family: var(--font-bookman);
+    font-weight: bold;
+    color: var(--denomin8r-blue);
 }
 
 .denomin8r-text {
@@ -403,6 +409,10 @@ hr {
     overflow: hidden;
 }
 
+a.contact-link {
+    text-decoration: none;
+}
+
 .contact-link:hover {
     background: #eeeeee;
     color: #d43c58;
@@ -584,4 +594,24 @@ hr {
     .posters-grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* Footer Styles */
+footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.footer-content {
+    text-align: right;
+}
+
+.footer-content p {
+    margin: 0;
+    font-size: 12px;
+    color: var(--text-light);
+    font-family: var(--font-monospace);
 }
