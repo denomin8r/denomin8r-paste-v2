@@ -699,6 +699,42 @@ a.contact-link {
     }
 }
 
+/* 404 Error Page Styles */
+.error-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.error-container img {
+    max-width: 100%;
+    height: auto;
+    max-height: 70vh;
+    object-fit: contain;
+    border: 2px solid black;
+    display: inline-block;
+}
+
+.error-container p {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+}
+
+.error-container a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: black;
+    color: white;
+    text-decoration: none;
+    font-family: var(--font-monospace);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background 0.2s ease;
+}
+
+.error-container a:hover {
+    background: var(--denomin8r-orange);
+}
+
 /* Footer Styles */
 footer {
     position: absolute;
