@@ -13,6 +13,7 @@
     --text-light: #bbb;
 }
 
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -30,27 +31,11 @@ body {
     min-height: 100vh;
 }
 
-/* Remove the blue overlay and eyechart background */
-body::before {
-    display: none;
-}
-
 main {
     position: relative;
     z-index: 2;
 }
 
-.content {
-    padding: 60px 0;
-}
-
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 40px;
-}
-
-/* Typography */
 h1 {
     color: black;
     font-family: var(--font-monospace);
@@ -101,20 +86,15 @@ li {
     line-height: 1.6;
 }
 
-.content a {
-    font-weight: normal;
-    text-decoration: underline;
-}
-
 a {
     color: black;
     text-decoration: underline;
     font-weight: bold;
-    transition: color 0.2s ease;
 }
 
 a:hover {
     color: var(--denomin8r-orange);
+    transition: color 0.2s ease;
 }
 
 /* Horizontal Rule Styling */
@@ -126,29 +106,48 @@ hr {
     margin: 1rem auto;
 }
 
-.denomin8r {
-    font-family: var(--font-bookman);
-    font-weight: bold;
-    color: var(--denomin8r-blue);
-}
-
+/* Global Denomin8r Text Styling */
 .denomin8r-text {
     color: var(--denomin8r-blue);
     font-family: var(--font-bookman);
-    font-size: 2.2rem;
     font-weight: bold;
 }
 
-/* Denomin8r Text Styling */
-.nav-denomin8r-text {
+/* Nav (Header) Denomin8r Logo Styles */
+.nav-denomin8r-logo * {
     color: var(--denomin8r-blue);
     font-family: var(--font-bookman);
-    font-size: 1.2rem;
+    font-size: 1.7rem;
     font-weight: bold;
+    text-transform: none;
+    letter-spacing: 0;
+    margin: 0;
+    border: none;
+    padding: 0;
+    text-decoration: none;
 }
 
-.nav-denomin8r-text::hover{
+.nav-denomin8r-logo:hover {
+    transition: color 0.2s ease;
     color: var(--denomin8r-orange);
+}
+
+
+/* FIX ME */
+/* TO BE CLEANED UP */
+.content {
+    padding: 60px 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.content a {
+    font-weight: normal;
+    text-decoration: underline;
 }
 
 /* Contents class link styling */
@@ -174,28 +173,6 @@ hr {
     justify-content: space-between;
     align-items: center;
     height: 70px;
-}
-
-.nav-logo h1 {
-    color: var(--denomin8r-blue);
-    font-family: var(--font-bookman);
-    font-size: 1.7rem;
-    font-weight: bold;
-    text-transform: none;
-    letter-spacing: 0;
-    margin: 0;
-    border: none;
-    padding: 0;
-}
-
-.nav-logo h1 a {
-    color: inherit;
-    text-decoration: none;
-    transition: color 0.2s ease;
-}
-
-.nav-logo h1 a:hover {
-    color: var(--denomin8r-orange);
 }
 
 .nav-menu {
@@ -260,61 +237,6 @@ hr {
     width: 100%;
     height: 2px;
     background: black;
-}
-
-.instagram-nav-link {
-    color: var(--denomin8r-blue) !important;
-    font-weight: bold;
-    font-family: var(--font-bookman);
-    border-left: 1px solid #ddd;
-    text-transform: none;
-    padding-left: 1.5rem;
-    margin-left: 0.5rem;
-    font-size: 1.25rem;
-    transition: color 0.2s ease;
-}
-
-.instagram-nav-link i {
-    transition: color 0.2s ease;
-}
-
-.instagram-nav-link:hover {
-    color: var(--denomin8r-orange) !important;
-    transition: color 0.2s ease;
-}
-
-.instagram-nav-link:hover .nav-denomin8r-text {
-    color: var(--denomin8r-orange) !important;
-    transition: color 0.2s ease;
-}
-
-/* Desktop Instagram Link Styles */
-.desktop-nav-link.instagram-nav-link {
-    color: var(--denomin8r-blue) !important;
-    font-weight: bold;
-    font-family: var(--font-bookman);
-    border-left: 1px solid #ddd;
-    text-transform: none;
-    padding-left: 1.5rem;
-    margin-left: 0.5rem;
-    font-size: 1.25rem;
-    transition: color 0.2s ease;
-}
-
-.desktop-nav-link.instagram-nav-link:hover {
-    color: var(--denomin8r-orange) !important;
-    transition: color 0.2s ease;
-}
-
-.desktop-nav-link.instagram-nav-link:hover .nav-denomin8r-text {
-    color: var(--denomin8r-orange) !important;
-    transition: color 0.2s ease;
-}
-
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
 }
 
 .bar {
@@ -685,6 +607,10 @@ a.contact-link {
     align-items: flex-start !important;
 }
 
+.nav-menu.active .nav-link:hover {
+    color: var(--denomin8r-orange);
+}
+
 /* Override desktop styles in mobile menu */
 .nav-menu.active .desktop-nav-link {
     padding: .6rem .6rem !important;
@@ -709,6 +635,7 @@ a.contact-link {
     border-bottom: none;
 }
 
+/* Desktop Instagram Link Styles */
 .nav-menu.active .instagram-nav-link {
     text-transform: none !important;
     font-family: var(--font-bookman) !important;
@@ -717,6 +644,10 @@ a.contact-link {
     border-left: none !important;
     padding-left: 1.5rem !important;
     margin-left: 0 !important;
+}
+
+.nav-menu.active .instagram-nav-link:hover .nav-denomin8r-text {
+    color: var(--denomin8r-orange) !important;
 }
 
 /* Override desktop Instagram styles in mobile menu */
@@ -731,12 +662,68 @@ a.contact-link {
     font-size: 1.0rem !important;
 }
 
-.hamburger.active .bar:nth-child(2) {
-    opacity: 0;
+.instagram-nav-link {
+    color: var(--denomin8r-blue) !important;
+    font-weight: bold;
+    font-family: var(--font-bookman);
+    border-left: 1px solid #ddd;
+    text-transform: none;
+    padding-left: 1.5rem;
+    margin-left: 0.5rem;
+    font-size: 1.25rem;
+    transition: color 0.2s ease;
+}
+
+.instagram-nav-link i {
+    transition: color 0.2s ease;
+}
+
+.instagram-nav-link:hover {
+    color: var(--denomin8r-orange) !important;
+    transition: color 0.2s ease;
+}
+
+.instagram-nav-link:hover .nav-denomin8r-text {
+    color: var(--denomin8r-orange) !important;
+    transition: color 0.2s ease;
+}
+
+.desktop-nav-link.instagram-nav-link {
+    color: var(--denomin8r-blue) !important;
+    font-weight: bold;
+    font-family: var(--font-bookman);
+    border-left: 1px solid #ddd;
+    text-transform: none;
+    padding-left: 1.5rem;
+    margin-left: 0.5rem;
+    font-size: 1.25rem;
+    transition: color 0.2s ease;
+}
+
+.desktop-nav-link.instagram-nav-link:hover {
+    color: var(--denomin8r-orange) !important;
+    transition: color 0.2s ease;
+}
+
+.desktop-nav-link.instagram-nav-link:hover .nav-denomin8r-text {
+    color: var(--denomin8r-orange) !important;
+    transition: color 0.2s ease;
+}
+
+/* Hamburger Menu Styles */
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
 }
 
 .hamburger.active .bar:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
 }
 
 .hamburger.active .bar:nth-child(3) {
