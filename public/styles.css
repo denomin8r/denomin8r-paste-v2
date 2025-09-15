@@ -113,6 +113,35 @@ hr {
     font-weight: bold;
 }
 
+/* Hamburger Menu Styles */
+.bar {
+    width: 25px;
+    height: 3px;
+    background: black;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    width: 35px;
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+    width: 35px;
+    transform: translateY(-8px) rotate(-45deg);
+}
+
 
 /*** NAV (HEADER) STYLES ***/
 
@@ -132,15 +161,11 @@ hr {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
+    height: 60px;
 }
 
-/* Nav (Header) Denomin8r Logo Styles */
-.nav-denomin8r-logo a {
-    color: var(--denomin8r-blue);
-    font-family: var(--font-bookman);
+.nav-denomin8r-logo a{
     font-size: 1.7rem;
-    font-weight: bold;
     text-decoration: none;
 }
 
@@ -153,14 +178,19 @@ hr {
     align-items: center;
 }
 
+.nav-menu a:hover {
+    color: var(--denomin8r-orange);
+}
+
 .nav-item {
     margin: 0;
     display: flex;
     align-items: center;
 }
 
-
-/* ============ continue cleaning up here ============ */
+.fab.fa-instagram { /* Navbar Instagram icon */
+    margin: 0 5px 0 5px;
+}
 
 .nav-link {
     text-decoration: none;
@@ -211,25 +241,6 @@ hr {
     height: 2px;
     background: black;
 }
-
-/* Nav (Header) Menu Item Styles */
-.nav-item *:hover {
-    color: var(--denomin8r-orange);
-    transition: color 0.2s ease;
-}
-
-/* Bar for Hamburger Menu */
-.bar {
-    width: 25px;
-    height: 3px;
-    background: black;
-    margin: 3px 0;
-    transition: 0.3s;
-}
-
-
-
-
 
 /* ------------------------------------------------- */
 /* TO BE CLEANED UP */
@@ -715,29 +726,6 @@ a.contact-link {
 .desktop-nav-link.instagram-nav-link:hover .nav-denomin8r-text {
     color: var(--denomin8r-orange) !important;
     transition: color 0.2s ease;
-}
-
-/* Hamburger Menu Styles */
-
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.hamburger.active .bar:nth-child(1) {
-    width: 35px;
-    transform: translateY(8px) rotate(45deg);
-}
-
-.hamburger.active .bar:nth-child(2) {
-    opacity: 0;
-}
-
-.hamburger.active .bar:nth-child(3) {
-    width: 35px;
-    transform: translateY(-8px) rotate(-45deg);
-
 }
 
 /* Responsive design */
