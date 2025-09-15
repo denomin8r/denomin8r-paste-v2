@@ -189,7 +189,7 @@ hr {
 }
 
 .fab.fa-instagram { /* Navbar Instagram icon */
-    margin: 0 5px 0 5px;
+    margin: 0 5px 0 0;
 }
 
 .nav-link {
@@ -230,6 +230,7 @@ hr {
 
 .desktop-nav-link:hover {
     color: var(--denomin8r-orange);
+    transition: color 0.2s ease;
 }
 
 .nav-link.active::after,
