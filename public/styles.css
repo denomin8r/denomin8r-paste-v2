@@ -143,8 +143,7 @@ hr {
 }
 
 
-/*** NAV (HEADER) STYLES ***/
-
+/* -------------------------------- */
 /* Navigation Styles - Minimalistic Monospace */
 .navbar {
     background: white;
@@ -199,6 +198,19 @@ hr {
     gap: 0 !important;
 }
 
+.nav-menu.active .nav-item {
+    margin: 6px 0 6px 0;
+}
+
+.nav-menu.active .instagram-nav-link {
+    border-left: none;
+    padding-left: 0;
+}
+
+.nav-menu.active .instagram-nav-link:hover {
+    color: var(--denomin8r-orange) !important;
+}
+
 /* -------------------------------- */
 /* Nav Item Styles */
 .nav-item {
@@ -241,37 +253,6 @@ hr {
     background: black;
 }
 
-/* Mobile Navigation Styles */
-
-/* Override desktop styles in mobile menu */
-.nav-menu.active {
-    padding: .6rem .6rem !important;
-    border-bottom: none !important;
-    width: 100% !important;
-    display: block !important;
-    line-height: 1.0rem !important;
-    margin: 0 !important;
-    text-decoration: none !important;
-    text-transform: uppercase !important;
-    letter-spacing: 1px !important;
-    font-family: var(--font-monospace) !important;
-    font-size: 1.0rem !important;
-    font-weight: normal !important;
-    color: black !important;
-    transition: color 0.2s ease !important;
-    position: static !important;
-    align-items: flex-start !important;
-}
-
-.nav-menu.active .nav-item:last-child .nav-link {
-    border-bottom: none;
-}
-
-
-.nav-menu.active .instagram-nav-link:hover .nav-denomin8r-text {
-    color: var(--denomin8r-orange) !important;
-}
-
 /* -------------------------------- */
 /* Instagram Link Styles */
 .instagram-nav-link {
@@ -295,29 +276,12 @@ hr {
     transition: color 0.2s ease;
 }
 
-.instagram-nav-link:hover .nav-denomin8r-text {
-    color: var(--denomin8r-orange) !important;
-    transition: color 0.2s ease;
-}
-
-.nav-denomin8r-text {
-    color: var(--denomin8r-orange) !important;
-    transition: color 0.2s ease;
-}
-
-/* Override desktop Instagram styles in mobile menu */
-.nav-menu.active {
-    border-left: none;
-}
-
-
 /* -------------------------------- */
-
+/* Content Styles */
 .content {
     padding: 30px 0 60px 0;
 }
 
-/* ------------------------------------------------- */
 .container {
     max-width: 800px;
     margin: 0 auto;
@@ -352,7 +316,6 @@ hr {
 .text-container p:last-child {
     margin-bottom: 0;
 }
-
 
 
 /* Posters Grid */
