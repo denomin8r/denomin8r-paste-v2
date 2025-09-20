@@ -63,7 +63,7 @@ h3 {
     font-family: var(--font-monospace);
     font-size: 1.2rem;
     font-weight: normal;
-    margin: 2rem 0 1rem 0;
+    margin: 1rem 0 1rem 0;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
@@ -169,6 +169,8 @@ hr {
     text-decoration: none;
 }
 
+/* -------------------------------- */
+/* Nav Menu Styles */
 .nav-menu {
     display: flex;
     list-style: none;
@@ -182,6 +184,23 @@ hr {
     color: var(--denomin8r-orange);
 }
 
+.nav-menu.active {
+    display: flex !important;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #f5f5f5;
+    border-top: 1px solid black;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    gap: 0 !important;
+}
+
+/* -------------------------------- */
+/* Nav Item Styles */
 .nav-item {
     margin: 0;
     display: flex;
@@ -213,28 +232,7 @@ hr {
 }
 
 /* Desktop Navigation Link Styles */
-.desktop-nav-link {
-    text-decoration: none;
-    color: black;
-    font-family: var(--font-monospace);
-    font-size: 1.1rem;
-    font-weight: normal;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: color 0.2s ease;
-    position: relative;
-    line-height: 1;
-    display: flex;
-    align-items: center;
-}
-
-.desktop-nav-link:hover {
-    color: var(--denomin8r-orange);
-    transition: color 0.2s ease;
-}
-
-.nav-link.active::after,
-.desktop-nav-link.active::after {
+.nav-link.active::after {
     content: '';
     position: absolute;
     bottom: 0px;
@@ -243,12 +241,83 @@ hr {
     background: black;
 }
 
-/* ------------------------------------------------- */
-/* TO BE CLEANED UP */
-.content {
-    padding: 60px 0;
+/* Mobile Navigation Styles */
+
+/* Override desktop styles in mobile menu */
+.nav-menu.active {
+    padding: .6rem .6rem !important;
+    border-bottom: none !important;
+    width: 100% !important;
+    display: block !important;
+    line-height: 1.0rem !important;
+    margin: 0 !important;
+    text-decoration: none !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    font-family: var(--font-monospace) !important;
+    font-size: 1.0rem !important;
+    font-weight: normal !important;
+    color: black !important;
+    transition: color 0.2s ease !important;
+    position: static !important;
+    align-items: flex-start !important;
 }
 
+.nav-menu.active .nav-item:last-child .nav-link {
+    border-bottom: none;
+}
+
+
+.nav-menu.active .instagram-nav-link:hover .nav-denomin8r-text {
+    color: var(--denomin8r-orange) !important;
+}
+
+/* -------------------------------- */
+/* Instagram Link Styles */
+.instagram-nav-link {
+    color: var(--denomin8r-blue);
+    font-weight: bold;
+    font-family: var(--font-bookman);
+    border-left: 1px solid #ddd;
+    text-transform: none;
+    padding-left: 1.5rem;
+    margin-left: 0.5rem;
+    font-size: 1.25rem;
+    transition: color 0.2s ease;
+}
+
+.instagram-nav-link i {
+    transition: color 0.2s ease;
+}
+
+.instagram-nav-link:hover {
+    color: var(--denomin8r-orange) !important;
+    transition: color 0.2s ease;
+}
+
+.instagram-nav-link:hover .nav-denomin8r-text {
+    color: var(--denomin8r-orange) !important;
+    transition: color 0.2s ease;
+}
+
+.nav-denomin8r-text {
+    color: var(--denomin8r-orange) !important;
+    transition: color 0.2s ease;
+}
+
+/* Override desktop Instagram styles in mobile menu */
+.nav-menu.active {
+    border-left: none;
+}
+
+
+/* -------------------------------- */
+
+.content {
+    padding: 30px 0 60px 0;
+}
+
+/* ------------------------------------------------- */
 .container {
     max-width: 800px;
     margin: 0 auto;
@@ -583,153 +652,9 @@ a.contact-link {
     font-size: 1.2rem;
 }
 
-/* Mobile Navigation Styles */
-.nav-menu.active {
-    display: flex !important;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background: #f5f5f5;
-    border-top: 1px solid black;
-    padding: 0 !important;
-    margin: 0 !important;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    gap: 0 !important;
-}
 
-.nav-menu.active .nav-item {
-    margin: 0 !important;
-    padding: 0 !important;
-    line-height: 0 !important;
-    list-style: none !important;
-    display: block !important;
-}
-
-.nav-menu.active .nav-link {
-    padding: .6rem .6rem !important;
-    border-bottom: none !important;
-    width: 100% !important;
-    display: block !important;
-    line-height: 1.0rem !important;
-    margin: 0 !important;
-    text-decoration: none !important;
-    text-transform: uppercase !important;
-    letter-spacing: 1px !important;
-    font-family: var(--font-monospace) !important;
-    font-size: 1.0rem !important;
-    font-weight: normal !important;
-    color: black !important;
-    transition: color 0.2s ease !important;
-    position: static !important;
-    align-items: flex-start !important;
-}
-
-.nav-menu.active .nav-link:hover {
-    color: var(--denomin8r-orange);
-}
-
-/* Override desktop styles in mobile menu */
-.nav-menu.active .desktop-nav-link {
-    padding: .6rem .6rem !important;
-    border-bottom: none !important;
-    width: 100% !important;
-    display: block !important;
-    line-height: 1.0rem !important;
-    margin: 0 !important;
-    text-decoration: none !important;
-    text-transform: uppercase !important;
-    letter-spacing: 1px !important;
-    font-family: var(--font-monospace) !important;
-    font-size: 1.0rem !important;
-    font-weight: normal !important;
-    color: black !important;
-    transition: color 0.2s ease !important;
-    position: static !important;
-    align-items: flex-start !important;
-}
-
-.nav-menu.active .nav-item:last-child .nav-link {
-    border-bottom: none;
-}
-
-/* Desktop Instagram Link Styles */
-.nav-menu.active .instagram-nav-link {
-    text-transform: none !important;
-    font-family: var(--font-bookman) !important;
-    font-weight: bold !important;
-    color: var(--denomin8r-blue);
-    border-left: none !important;
-    padding-left: 1.5rem !important;
-    margin-left: 0 !important;
-}
-
-.nav-menu.active .instagram-nav-link:hover .nav-denomin8r-text {
-    color: var(--denomin8r-orange) !important;
-}
-
-/* Override desktop Instagram styles in mobile menu */
-.nav-menu.active .desktop-nav-link.instagram-nav-link {
-    text-transform: none !important;
-    font-family: var(--font-bookman) !important;
-    font-weight: bold !important;
-    color: var(--denomin8r-blue);
-    border-left: none !important;
-    padding-left: 1.5rem !important;
-    margin-left: 0 !important;
-    font-size: 1.0rem !important;
-}
-
-.instagram-nav-link {
-    color: var(--denomin8r-blue);
-    font-weight: bold;
-    font-family: var(--font-bookman);
-    border-left: 1px solid #ddd;
-    text-transform: none;
-    padding-left: 1.5rem;
-    margin-left: 0.5rem;
-    font-size: 1.25rem;
-    transition: color 0.2s ease;
-}
-
-.instagram-nav-link i {
-    transition: color 0.2s ease;
-}
-
-.instagram-nav-link:hover {
-    color: var(--denomin8r-orange) !important;
-    transition: color 0.2s ease;
-}
-
-.instagram-nav-link:hover .nav-denomin8r-text {
-    color: var(--denomin8r-orange) !important;
-    transition: color 0.2s ease;
-}
-
-.desktop-nav-link.instagram-nav-link {
-    color: var(--denomin8r-blue);
-    font-weight: bold;
-    font-family: var(--font-bookman);
-    border-left: 1px solid #ddd;
-    text-transform: none;
-    padding-left: 1.5rem;
-    margin-left: 0.5rem;
-    font-size: 1.25rem;
-    transition: color 0.2s ease;
-}
-
-.desktop-nav-link.instagram-nav-link:hover {
-    color: var(--denomin8r-orange) !important;
-    transition: color 0.2s ease;
-}
-
-.desktop-nav-link.instagram-nav-link:hover .nav-denomin8r-text {
-    color: var(--denomin8r-orange) !important;
-    transition: color 0.2s ease;
-}
-
-/* Responsive design */
+/* -------------------------------- */
+/* Mobile Responsive Design */
 @media (max-width: 768px) {
     .container {
         padding: 0 20px;
@@ -761,6 +686,7 @@ a.contact-link {
     }
 }
 
+/* -------------------------------- */
 /* 404 Error Page Styles */
 .error-container {
     text-align: center;
@@ -803,7 +729,6 @@ a.contact-link {
 
 
 /* -------------------------------- */
-
 /* Footer Styles */
 footer {
     position: absolute;
