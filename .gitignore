@@ -72,3 +72,5 @@ node_modules/
 /public/assets/posters
 .DS_Store
 .DS_Store
+/hero-collage
+.DS_Store
