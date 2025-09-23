@@ -207,18 +207,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     addImageLoading();
-
-    // Add hover effects to Instagram links
-    const instagramLinks = document.querySelectorAll('.instagram-link');
-    instagramLinks.forEach(link => {
-        link.addEventListener('mouseenter', function() {
-            this.style.transform = 'scale(1.05)';
-        });
-        
-        link.addEventListener('mouseleave', function() {
-            this.style.transform = 'scale(1)';
-        });
-    });
 });
 
 // Utility function to show success/error messages
