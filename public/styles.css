@@ -114,6 +114,11 @@ hr {
     font-weight: bold;
 }
 
+/* Denomin8r Text in h1 - specific sizing */
+h1 .denomin8r-text {
+    font-size: 1.8rem;
+}
+
 /* Hamburger Menu Styles */
 .bar {
     width: 25px;
