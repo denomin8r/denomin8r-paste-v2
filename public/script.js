@@ -70,36 +70,6 @@ document.addEventListener('DOMContentLoaded', function() {
     loadHeader();
     loadFooter();
 
-    // Poster Filtering Functionality
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const posterItems = document.querySelectorAll('.poster-item');
-
-    if (filterButtons.length > 0 && posterItems.length > 0) {
-        filterButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                // Remove active class from all buttons
-                filterButtons.forEach(btn => btn.classList.remove('active'));
-                // Add active class to clicked button
-                this.classList.add('active');
-
-                const filter = this.getAttribute('data-filter');
-
-                posterItems.forEach(item => {
-                    if (filter === 'all') {
-                        item.style.display = 'block';
-                    } else {
-                        const categories = item.getAttribute('data-category');
-                        if (categories && categories.includes(filter)) {
-                            item.style.display = 'block';
-                        } else {
-                            item.style.display = 'none';
-                        }
-                    }
-                });
-            });
-        });
-    }
-
     // Contact Form Handling
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
